@@ -1,0 +1,90 @@
+.fagri-testimonials-wrapper {
+
+  /* Add a dark overlay for the background image */
+  &::before {
+    @include section-background-overlay();
+  }
+
+  background-position: top center;
+  background-size: cover;
+  background-color: #000000;
+  position: relative;
+
+  /* Place background image toolpick on the right side of the section */
+  .fagri-testimonials-background-switcher > .customize-partial-edit-shortcut {
+    top: 0;
+    right: 15px;
+  }
+
+  .hestia-testimonials {
+
+    .hestia-title {
+      @include front-page-section-title();
+      color: #ffffff;
+    }
+
+    .description {
+      @include front-page-section-subtitle();
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hestia-testimonials-content {
+
+      .card-testimonial {
+        @include border-radius(4px);
+        background-color: #ffffff;
+        margin-top: 60px;
+
+        .card-avatar {
+
+          /* Images without link */
+          img {
+            filter: grayscale(100%);
+            margin: -80px auto 0;
+            box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+          }
+          /* Images with link */
+          a:hover {
+            opacity: initial;
+          }
+
+        }
+        .content {
+
+          padding: 0 20px 40px;
+
+          .card-title {
+            font-weight: 400;
+            line-height: 26px;
+          }
+          .category {
+            color: #9A9A9A;
+            font-weight: 700;
+            line-height: 24px;
+            text-transform: capitalize;
+          }
+          .card-description::before {
+            position: absolute;
+            content: "\f10e";
+            font-family: "FontAwesome";
+            font-size: 32px;
+            top: -35px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+          }
+          .card-description {
+            position: relative;
+            color: #9A9A9A;
+            font-weight: 300;
+            line-height: 24px;
+            margin: 60px auto 0;
+          }
+        }
+      }
+    }
+  }
+}

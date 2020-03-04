@@ -1,0 +1,14 @@
+[02/Mar/2020:13:33:10] (ℹ️): WordPress Instance Info:
+[02/Mar/2020:13:33:10] (ℹ️): Home URL : http://localhost/Senac
+[02/Mar/2020:13:33:10] (ℹ️): Site URL : http://localhost/Senac
+[02/Mar/2020:13:33:10] (ℹ️): WordPress Version : 5.3.2
+[02/Mar/2020:13:33:10] (ℹ️): Onboarding Version : 1.7.12
+[02/Mar/2020:13:33:10] (ℹ️): Multisite : No
+[02/Mar/2020:13:33:10] (ℹ️): Server Info : Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.7
+[02/Mar/2020:13:33:10] (ℹ️): PHP Version : 7.3.7
+[02/Mar/2020:13:33:10] (ℹ️): HTTPS : No
+[02/Mar/2020:13:33:10] (ℹ️): PHP Max Execution Time : 30
+[02/Mar/2020:13:33:10] (ℹ️): PHP Max Input Vars : 1000
+[02/Mar/2020:13:33:10] (ℹ️): Max Upload Size : 2097152
+[02/Mar/2020:13:33:10] (ℹ️): Plugins:
+[02/Mar/2020:13:33:10] (ℹ️): [PLUGIN] Orbit Fox Companion : v2.9.2 (Themeisle)

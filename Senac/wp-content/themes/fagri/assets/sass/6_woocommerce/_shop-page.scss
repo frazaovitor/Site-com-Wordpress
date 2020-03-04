@@ -1,0 +1,15 @@
+.woocommerce.archive {
+
+  .wrapper .main {
+    background-color: #ffffff;
+
+    .product {
+      /* Remove ease up effect on hover */
+      &:hover {
+        .card-image {
+          transform: unset;
+        }
+      }
+    }
+  }
+}

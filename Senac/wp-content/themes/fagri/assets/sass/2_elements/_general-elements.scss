@@ -1,0 +1,33 @@
+/* Navbar */
+.navbar {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+
+  .navbar-toggle:hover {
+    box-shadow: none !important;
+  }
+}
+
+/* Social icons on Single Post Page */
+.btn.btn-just-icon {
+  @include no-box-shadow();
+
+  &:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  }
+}
+
+/* Default secondary color for Hestia Lite */
+aside .widget a {
+  color: #2c2c2c;
+}
+
+/* Default color for card title instead of secondary, for Hestia Lite */
+.card-title {
+  color: #2c2c2c;
+}
+
+/* Change header min-height on Cart and Checkout pages */
+.woocommerce-cart .header-small,
+.woocommerce-checkout .header-small {
+  min-height: 250px;
+}

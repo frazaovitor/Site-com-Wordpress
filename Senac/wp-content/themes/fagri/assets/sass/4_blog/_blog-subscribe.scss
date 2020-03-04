@@ -1,0 +1,10 @@
+.blog {
+  .subscribe-line {
+    .hestia-title {
+      @include front-page-section-title();
+    }
+    .description {
+      @include front-page-section-subtitle();
+    }
+  }
+}

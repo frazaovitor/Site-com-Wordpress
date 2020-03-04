@@ -1,0 +1,53 @@
+.woocommerce #reviews {
+  #comments ol.commentlist li.comment {
+    img.avatar {
+      margin-top: 25px;
+      width: 64px;
+      height: 64px;
+      box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    }
+    .comment-text {
+      padding: 14px 39px 0;
+    }
+    .comment-text p.meta .woocommerce-review__author {
+      color: #2c2c2c;
+      font-family: inherit;
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 29px;
+      margin-bottom: 15px;
+    }
+    .woocommerce-review__published-date {
+      color: #6c757d;
+      font-size: 60%;
+    }
+    .description {
+      color: #888888;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 25px;
+      margin-bottom: 16px;
+    }
+  }
+  #review_form_wrapper {
+    label {
+      color: #2c2c2c;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    input#author,
+    input#email {
+      @include border-radius(30px);
+      background-image: none;
+      padding-left: 10px;
+      border: 1px solid #E3E3E3;
+    }
+    input[type="submit"] {
+      @include default-button();
+      @include no-box-shadow();
+    }
+    input[type="submit"]:hover {
+      @include button-hover();
+    }
+  }
+}

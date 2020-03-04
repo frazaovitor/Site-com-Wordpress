@@ -1,0 +1,18 @@
+.btn,
+.btn.btn-primary,
+.button,
+button,
+input[type="submit"] {
+  @include default-button();
+  box-shadow: none !important;
+  border-radius: 30px !important;
+}
+
+.btn:hover,
+.btn.btn-primary:hover,
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  @include button-hover();
+}
+

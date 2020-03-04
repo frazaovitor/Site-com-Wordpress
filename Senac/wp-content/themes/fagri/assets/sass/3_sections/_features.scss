@@ -1,0 +1,71 @@
+.hestia-features {
+
+  .hestia-title {
+    @include front-page-section-title();
+  }
+
+  .description {
+    @include front-page-section-subtitle();
+  }
+
+  .feature-box {
+
+    .hestia-info {
+
+      > a {
+
+        .icon {
+          @include border-radius(50px);
+          transition: transform .4s, box-shadow .4s;
+          transition-property: transform, box-shadow;
+          transition-duration: 0.4s, 0.4s;
+          transition-timing-function: initial;
+          transition-delay: initial;
+          width: 80px;
+          height: 80px;
+          padding: 25px 0;
+          margin: 0 auto;
+
+          i {
+            font-size: 30px;
+          }
+        }
+
+        .info-title {
+          font-weight: 400;
+          line-height: 30px;
+          padding: 0 15px;
+          margin: 25px 0 15px;
+        }
+      }
+      > a:hover {
+
+        opacity: initial;
+
+        .icon {
+          @include border-radius(50px);
+          transform: translate3d(0, -0.5rem, 0);
+          transition: transform .4s, box-shadow .4s;
+          transition-property: transform, box-shadow;
+          transition-duration: 0.4s, 0.4s;
+          transition-timing-function: initial;
+          transition-delay: initial;
+          opacity: initial;
+        }
+
+        .info-title {
+          opacity: initial;
+        }
+
+      }
+
+      .description {
+        color: #888888;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

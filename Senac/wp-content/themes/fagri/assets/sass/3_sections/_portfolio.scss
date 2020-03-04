@@ -1,0 +1,21 @@
+.hestia-work {
+
+  .hestia-title {
+    @include front-page-section-title();
+  }
+
+  .description {
+    @include front-page-section-subtitle();
+  }
+
+  .hestia-portfolio-content {
+
+    .portfolio-item {
+
+      .card-title {
+        font-weight: 400;
+        line-height: 31px;
+      }
+    }
+  }
+}

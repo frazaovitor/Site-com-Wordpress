@@ -1,0 +1,8 @@
+.hestia-ribbon {
+
+  .hestia-title {
+    @include front-page-section-title();
+    padding: 0;
+    color: #ffffff;
+  }
+}

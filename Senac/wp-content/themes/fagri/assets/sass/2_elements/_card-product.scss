@@ -1,0 +1,133 @@
+.card-product {
+
+  @include no-box-shadow();
+
+  .card-image {
+    box-shadow: none;
+    margin: 0;
+  }
+  .onsale {
+    top: 7px !important;
+    right: 6px !important;
+  }
+  .content {
+
+    padding: 20px 5px;
+
+    .category a {
+      opacity: 0.7;
+      font-weight: 700;
+      text-transform: none;
+    }
+    .card-title a {
+      font-weight: 400;
+      line-height: 26px;
+      margin-top: 15px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid transparent;
+      transition: all 150ms ease 0s;
+
+      &:hover {
+        opacity: initial;
+      }
+    }
+    .card-description p {
+      color: #9A9A9A;
+      font-weight: 300;
+      line-height: 27px;
+    }
+    .footer {
+      margin-top: 5px;
+
+      .price h4 {
+        color: #888888;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23px;
+        margin-top: 9px;
+      }
+
+      .stats {
+        a {
+          i {
+            font-size: 15px;
+          }
+
+          .tooltip .tooltip-arrow:before {
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            top: -7px;
+            content: "";
+            border-left: 7px solid white;
+            left: -9px;
+            position: absolute;
+            display: block;
+            width: 5px;
+            height: 5px;
+            z-index: 100;
+          }
+          .tooltip .tooltip-arrow {
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 7px solid rgba(0, 0, 0, 0.2);
+            top: 55px;
+            left: 30% !important;
+            position: absolute;
+            width: 5px;
+            height: 5px;
+          }
+          .tooltip .tooltip-inner {
+            @include border-radius(4px);
+            background-color: #FFFFFF;
+            box-shadow: 0 1px 13px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(115, 71, 38, 0.23);
+            color: #66615B;
+            max-width: 200px;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            opacity: 1;
+            transform: translate3d(-75%,100%,0);
+          }
+        }
+        a:hover {
+          box-shadow: none !important;
+        }
+        .hestia-view-cart-wrapper a {
+          @include default-button();
+          color: #ffffff;
+
+          &:hover {
+            @include button-hover();
+          }
+        }
+      }
+    }
+  }
+} /* End of card product */
+
+.woocommerce .card-product {
+  .content {
+    .category a {
+      font-size: 12px;
+    }
+    .card-title a {
+      font-size: 21px;
+    }
+    .card-description p {
+      font-size: 17px;
+    }
+  }
+}
+
+/* Remove image box shadow from card-product which has li.product parent */
+.product .card.card-product .card-image,
+.product:hover .card.card-product .card-image {
+  @include no-box-shadow();
+}
+/* Add underline effect on hover */
+.hestia-shop .shop-item:hover .card-product .card-title a,
+.product:hover > .card.card-product .content .card-title a {
+  border-color: inherit;
+}
+
+

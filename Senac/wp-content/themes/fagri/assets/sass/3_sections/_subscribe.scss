@@ -1,0 +1,11 @@
+.hestia-subscribe {
+
+  .title {
+    @include front-page-section-title();
+    color: #ffffff;
+  }
+  .subscribe-description {
+    @include front-page-section-subtitle();
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

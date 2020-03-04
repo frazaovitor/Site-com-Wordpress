@@ -1,0 +1,75 @@
+.hestia-blogs {
+
+  background-color: #ffffff;
+
+  .hestia-title {
+    @include front-page-section-title();
+  }
+  .description {
+    @include front-page-section-subtitle();
+  }
+
+  .hestia-blog-content .card-blog.card-plain {
+
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+    .card-image {
+      @include no-box-shadow();
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      
+      img {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+      }
+    }
+    .card-image + .content {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .content {
+      @include border-radius(4px);
+      background-color: #ffffff;
+      padding: 20px;
+
+      .category {
+        font-weight: 700;
+        line-height: 15px;
+        text-transform: capitalize;
+        margin: 0 0 8px;
+
+        a {
+          opacity: 0.7;
+        }
+      }
+      .card-title {
+        font-weight: 400;
+        line-height: 22px;
+        margin-top: 15px;
+        margin-bottom: 12px;
+
+        a {
+          color: inherit;
+          border-bottom: 2px solid transparent;
+          -webkit-transition: all 150ms ease 0s;
+          -moz-transition: all 150ms;
+          -ms-transition: all 150ms;
+          -o-transition: all 150ms;
+          transition: all 150ms;
+
+          &:hover {
+            opacity: 1;
+            border-color: inherit;
+          }
+        }
+      }
+      .card-description {
+        color: #9A9A9A;
+        font-weight: 300;
+        line-height: 27px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

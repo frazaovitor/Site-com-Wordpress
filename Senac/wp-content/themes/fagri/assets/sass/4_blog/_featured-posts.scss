@@ -1,0 +1,70 @@
+.blog {
+  /* Blog featured posts style */
+  .hestia-blog-featured-posts {
+
+    .hestia-blog-featured-card {
+      /* Card without background image */
+      .card {
+
+        box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+        .card-body {
+
+          .category {
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 15px;
+            text-transform: uppercase;
+          }
+          .card-title {
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 26px;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .card-description {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 27px;
+          }
+        }
+      }
+      /* Card with background image */
+      .card.card-background {
+        .card-body {
+          .card-title,
+          .card-description {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .hestia-blog-featured-card.col-md-6 {
+      /* Featured post without image */
+      .card {
+        .card-body {
+          min-height: 290px;
+          display: flex;
+          flex-direction: column;
+
+          a.btn {
+            align-self: baseline;
+            margin-top: auto;
+          }
+        }
+      }
+      /* Featured post with image */
+      .card.card-background {
+        .card-body {
+          a.btn {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}

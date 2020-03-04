@@ -1,0 +1,65 @@
+input:not([type="submit"]) {
+  background-image: none !important;
+  border: 1px solid #e3e3e3 !important;
+  border-radius: 30px !important;
+  padding-left: 10px !important;
+}
+textarea.form-control,
+input[type="checkbox"],
+input[type="file"],
+select {
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #e3e3e3 !important;
+  padding-left: 0 !important;
+}
+
+input label {
+  margin-left: 10px !important;
+}
+
+input:focus-within label {
+  display: none !important;
+}
+
+/* Remove the label floating transition */
+.form-group label.control-label {
+  font-size: 14px !important;
+  line-height: 1.42857 !important;
+  margin-left: 10px;
+}
+.form-group.is-focused label.control-label {
+  top: -7px !important;
+  font-size: 14px !important;
+  line-height: 1.42857 !important;
+  margin-left: 10px;
+}
+
+/* Hide the label while typing */
+.form-group label.control-label {
+  display: none;
+}
+.form-group.is-empty label.control-label {
+  display: inline-block;
+}
+
+/* Search page */
+.search.search-no-results {
+  input.search-submit {
+    border-radius: 50% !important;
+    vertical-align: initial;
+    margin: 0 !important;
+    padding: 0;
+    top: -2px;
+    width: 39px;
+    height: 39px;
+  }
+  .search-form::after {
+    top: 4px;
+    right: 12px;
+  }
+  .search-form label {
+    padding-right: 5px;
+  }
+}

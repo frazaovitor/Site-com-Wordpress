@@ -1,0 +1,50 @@
+/*
+Theme Name:     Fagri
+Theme URI:      https://themeisle.com/themes/fagri/
+Author:         ThemeIsle
+Author URI:     https://themeisle.com
+Description:    Fagri is a responsive WordPress theme, built to fit all kinds of businesses. Its multipurpose design is great for small businesses, startups, corporate businesses, freelancers, portfolios, WooCommerce, creative agencies, or niche websites (medical, restaurants, sports, fashion). Fagri was created on top of Now UI Kit and displays an elegant one-page layout, complemented by the smooth parallax effect. The theme comes with a clean look, but it also provides subtle hover animations. Moreover, Fagri offers Sendinblue newsletter integration, a flexible interface via Live Customizer, a widgetized footer, full compatibility with Elementor and Beaver Builder, a full-width featured slider, and even more functionality based on the latest WordPress trends. Last but not least, the theme is lightweight and SEO-friendly.
+Version:        1.0.6
+License:        GNU General Public License v2 or later
+License URI:    http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:    fagri
+Template:       hestia
+Tags: blog, custom-logo, portfolio, e-commerce, rtl-language-support, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, left-sidebar, right-sidebar, footer-widgets
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
+
+@import "0_base/reset";
+@import "0_base/mixins";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "1_typography/typography-main";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "2_elements/elements-main";
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+@import "3_sections/sections-main";
+
+/*--------------------------------------------------------------
+# Blog
+--------------------------------------------------------------*/
+@import "4_blog/blog-main";
+
+/*--------------------------------------------------------------
+# Single Post Page
+--------------------------------------------------------------*/
+@import "5_page/page-main";
+
+/*--------------------------------------------------------------
+# WooCommerce
+--------------------------------------------------------------*/
+@import "6_woocommerce/woocommerce-main";

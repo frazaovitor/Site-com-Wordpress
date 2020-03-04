@@ -1,0 +1,97 @@
+.hestia-pricing {
+
+  background-color: #ffffff;
+
+  .hestia-title {
+    @include front-page-section-title();
+  }
+  div:first-of-type > p {
+    @include front-page-section-subtitle();
+  }
+
+  .card-pricing {
+    .content {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      padding: 20px 5px !important;
+
+      .category {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 15px;
+        text-transform: capitalize;
+        padding-bottom: 8px;
+        margin: 0 auto;
+      }
+      .hestia-pricing-icon-wrapper {
+        border: none;
+      }
+      .card-title {
+        font-size: 49px;
+        font-weight: 400;
+        line-height: 62px;
+
+        small {
+          color: inherit;
+          font-size: 26px;
+          font-weight: 700;
+        }
+      }
+      .pricing-has-icon + .card-title {
+        color: #2c2c2c;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 33px;
+        margin-top: 30px;
+        margin-bottom: 12px;
+
+        small {
+          font-size: 60%;
+          font-weight: 400;
+        }
+      }
+      ul li {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+      .btn {
+        margin: 10px 1px;
+      }
+    }
+  }
+  .card-pricing.card-raised {
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+    .content,
+    .content small,
+    .content b,
+    .content stong,
+    .content span,
+    .content p,
+    .content a,
+    .content .category,
+    .content ul li {
+      color: #ffffff;
+    }
+    .content {
+      /* Reject secondary color on card title when icon is set */
+      .pricing-has-icon + .card-title {
+        color: #ffffff;
+      }
+      .hestia-pricing-icon-wrapper {
+        background-color: #ffffff;
+        box-shadow: 0px 9px 30px -6px #ffffff !important;
+      }
+      .card-title {
+        small {
+          color: inherit;
+        }
+      }
+      .btn {
+        background-color: #ffffff !important;
+      }
+    }
+  }
+}

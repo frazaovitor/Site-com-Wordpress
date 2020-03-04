@@ -1,0 +1,86 @@
+.pirate_forms_wrap {
+  /* Name, Subject, Email fields */
+  .contact_name_wrap,
+  .contact_email_wrap,
+  .contact_subject_wrap {
+    .form-group {
+      /* Move label to make place for the icon */
+      label.control-label {
+        left: 30px;
+      }
+      /* Moving the cursor to right to make place for the icon */
+      .form-control {
+        padding-left: 30px !important;
+      }
+    }
+  } /* Enf of input fields */
+  .contact_name_wrap .form-group::before {
+    @include icon-in-field-contact();
+    content: "\f007";
+  }
+  .contact_email_wrap .form-group::before {
+    @include icon-in-field-contact();
+    content: "\f003";
+  }
+  .contact_subject_wrap .form-group::before {
+    @include icon-in-field-contact();
+    content: "\f006";
+  }
+
+  .form-control:not(textarea):not([type="file"]):not(select) {
+    @include border-radius(30px);
+    padding-top: 0;
+    padding-left: 10px;
+    padding-bottom: 0;
+    border: 1px solid #E3E3E3;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition-property: color, border-color, background-color;
+    transition-duration: 0.3s, 0.3s, 0.3s;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: initial;
+  }
+  /* Remove bottom loading line animation */
+  .form-control:not(textarea):not(select):not([type="file"]) {
+    background-image: none !important;
+  }
+  /* Remove label ease-up transition */
+  .form-group.label-floating label.control-label,
+  .form-group.label-floating.is-focused label.control-label {
+    top: 0;
+    font-size: inherit;
+    transition: none;
+    margin: 11px 0 0;
+  }
+  /* Hide label when field is not empty */
+  .form-group label.control-label {
+    display: none;
+  }
+  .form-group.is-empty label.control-label {
+    display: inline-block;
+  }
+  /* Adjust label line-height */
+  .form-group label.control-label,
+  .form-group.is-focused label.control-label {
+    line-height: 1.07143 !important;
+  }
+
+  .pirate-forms-submit-button {
+    border-radius: 30px;
+  }
+
+  /** Remove label floating transition
+   * this code is related to the one in _forms file lines 25-36
+   */
+  .form-group.is-focused label.control-label {
+    top: 0 !important;
+  }
+}
+
+.hestia-contact .pirate_forms_wrap {
+  .contact_name_wrap .form-group::before,
+  .contact_email_wrap .form-group::before,
+  .contact_subject_wrap .form-group::before {
+    top: 17px;
+    left: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+/* Related Products */
+.woocommerce.single-product .related.products {
+
+  /* Title */
+  > h2 {
+    @include recommend-products-title();
+  }
+
+  /* Remove raising effect on hover */
+  .product:hover .card.card-product .card-image {
+    transform: unset;
+  }
+}
+
+/* Upsells and Cross-Sells */
+.woocommerce-page {
+  .up-sells,
+  .cross-sells {
+
+    > h2 {
+      @include recommend-products-title();
+    }
+
+    /* Remove raising effect on hover */
+    .product:hover .card.card-product .card-image {
+      transform: unset;
+    }
+  }
+}

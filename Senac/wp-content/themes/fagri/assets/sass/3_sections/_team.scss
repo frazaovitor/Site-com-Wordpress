@@ -1,0 +1,149 @@
+.fagri-team-wrapper {
+
+  /* Add a dark overlay for the background image */
+  &::before {
+    @include section-background-overlay();
+  }
+
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+
+  /* Place background image toolpick on the right side of the section */
+  .fagri-team-background-switcher > .customize-partial-edit-shortcut {
+    top: 0;
+    right: 15px;
+  }
+
+  .hestia-team {
+
+    .hestia-title {
+      @include front-page-section-title();
+      color: #ffffff;
+    }
+    .description {
+      @include front-page-section-subtitle();
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .card-profile.card-plain {
+
+      @include border-radius(4px);
+      background-color: #ffffff;
+      box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+      .col-md-5 {
+
+        .card-image {
+
+          @include border-radius(4px);
+          @include no-box-shadow();
+
+          img {
+            @include border-radius(4px);
+            filter: grayscale(100%);
+          }
+        }
+      }
+      .col-md-7 {
+
+        .content {
+
+          text-align: center;
+          padding: 20px;
+
+          .card-title {
+            font-weight: 400;
+            line-height: 31px;
+            margin-top: 15px;
+            margin-bottom: 12px;
+          }
+          .category {
+            font-weight: 700;
+            line-height: 15px;
+            margin-bottom: 8px;
+          }
+          .card-descrption {
+            color: #9A9A9A;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 27px;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media ( max-width: 991px ) {
+  .fagri-team-wrapper {
+    .hestia-team {
+      .card-profile.card-plain {
+        .col-md-5,
+        .col-md-7 {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .col-md-5 {
+          .card-image {
+
+            @include no-bottom-border-radius();
+            width: 100%;
+            height: auto;
+
+            img {
+              @include no-bottom-border-radius();
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media ( min-width: 992px ) {
+
+  .fagri-team-wrapper {
+    .hestia-team {
+      .card-profile.card-plain {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .col-md-5 {
+
+          padding-left: 0;
+          align-self: stretch;
+
+          .card-image {
+
+            @include no-right-border-radius();
+            height: 100%;
+
+            img {
+              @include no-right-border-radius();
+              object-fit: cover;
+            }
+          }
+          /* Case with link set */
+          .card-image > a {
+            height: 100%;
+          }
+        }
+        .col-md-7 {
+
+          padding-right: 0;
+          align-self: stretch;
+
+          .content {
+            height: 100%;
+          }
+          /* Case with link set */
+          .content > a {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

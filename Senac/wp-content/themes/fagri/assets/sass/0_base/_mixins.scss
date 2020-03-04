@@ -1,0 +1,97 @@
+/* General */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin no-bottom-border-radius() {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+@mixin no-right-border-radius() {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+@mixin no-box-shadow() {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Font Smooth properties */
+@mixin font-smooth() {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+@mixin no-font-smooth() {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+}
+
+/* Front page title and subtitle */
+@mixin front-page-section-title() {
+  color: #2c2c2c;
+  font-weight: 700;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+@mixin front-page-section-subtitle() {
+  color: #9A9A9A;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+@mixin default-button() {
+  @include no-box-shadow();
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+}
+@mixin button-hover() {
+  box-shadow: 0 3px 8px 0 rgba( 0, 0, 0, 0.17 ) !important;
+  opacity: 0.9;
+}
+
+/* Contact Form icon */
+@mixin icon-in-field-contact() {
+  color: #888888;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+
+/* Dark overlay for sections with background image option */
+@mixin section-background-overlay() {
+  background-color: rgba( 0, 0, 0, 0.5 );
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+/* WooCommerce pages */
+
+/* related, cross-sells, upsells title */
+@mixin recommend-products-title() {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+/* Icon on before of the input field wrapper */
+@mixin icon-for-field() {
+  color: #888888;
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+}

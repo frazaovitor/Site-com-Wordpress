@@ -1,0 +1,55 @@
+/* All notifications */
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-success {
+  a,
+  .btn,
+  .button,
+  button {
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+
+  a:hover,
+  .btn:hover,
+  .button,
+  button:hover {
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+}
+
+/* Product Page */
+.woocommerce.single-product .woocommerce-error,
+.woocommerce.single-product .woocommerce-message {
+  float: right;
+  max-width: 50%;
+  margin-right: 23px;
+
+  a, a:hover {
+    color: inherit;
+  }
+}
+@media (max-width: 1199px) {
+  .woocommerce.single-product .woocommerce-error,
+  .woocommerce.single-product .woocommerce-message {
+    max-width: 45%;
+    margin-right: 28px;
+  }
+}
+@media (max-width: 992px) {
+  .woocommerce.single-product .woocommerce-error,
+  .woocommerce.single-product .woocommerce-message {
+    max-width: 40%;
+    margin-right: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .woocommerce.single-product .woocommerce-error,
+  .woocommerce.single-product .woocommerce-message {
+    float: none;
+    max-width: 1000%;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,145 @@
+.section#comments {
+
+  .hestia-title {
+    color: #2c2c2c;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+    padding: 30px 0 0;
+    margin: 0 0 30px;
+  }
+
+  .comment {
+    .pull-left {
+
+      padding: 10px;
+
+      &:hover {
+        opacity: initial;
+      }
+
+      .comment-author.avatar {
+        box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+
+        img {
+          filter: grayscale(100%);
+          @include no-box-shadow();
+        }
+      }
+    }
+    .media-body {
+      /* Comment author name */
+      .media-heading {
+
+        color: #2c2c2c;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 29px;
+        margin-bottom: 15px;
+
+        /* comment date */
+        small {
+          color: #6c757d;
+          font-size: 60%;
+        }
+      }
+      /* comment message */
+      p {
+        color: #888888;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        margin-bottom: 16px;
+      }
+      /* Reply button */
+      .media-footer {
+        a {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 16px;
+          text-transform: capitalize;
+          padding: 11px 22px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+
+          i::before {
+            content: "\f1d9";
+          }
+        }
+      }
+    }
+  }
+  ul.children .comment-author.avatar {
+    width: 64px;
+    height: 64px;
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+/* Leave a reply logged in */
+.logged-in #respond.comment-respond {
+
+  /* Title */
+  .hestia-title {
+    margin: 0;
+  }
+
+  /* Author's avatar */
+  .pull-left.author {
+    margin: 45px 20px 0 0;
+  }
+  /* Logged in as - message */
+  .logged-in-as {
+
+    margin-bottom: 30px;
+
+    &::before {
+      content: "-";
+      margin-right: 5px;
+    }
+    &::after {
+      content: "-";
+      margin-left: 5px;
+    }
+
+    text-align: center;
+    transform: translateX(-8%);
+
+    a {
+      color: #6c757d;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .logged-in #respond.comment-respond .logged-in-as {
+    transform: translateX(-10%);
+  }
+}
+@media (max-width: 991px) {
+  .logged-in #respond.comment-respond .logged-in-as {
+    transform: translateX(-9%);
+  }
+}
+@media (max-width: 768px) {
+  .logged-in #respond.comment-respond .logged-in-as {
+    transform: translateX(0%);
+  }
+}
+
+/* Leave a reply logged out */
+#respond.comment-respond {
+
+  .pull-left.author {
+    margin: -15px 20px 0 0;
+
+    .avatar {
+      box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

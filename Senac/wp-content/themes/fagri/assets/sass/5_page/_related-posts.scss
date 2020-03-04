@@ -1,0 +1,93 @@
+.section.related-posts {
+
+  background-color: #ffffff;
+
+  .hestia-title {
+    @include front-page-section-title();
+    color: #2c2c2c;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  .card-blog {
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+    .card-image {
+      @include no-box-shadow();
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      margin: 0;
+
+      img {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+      }
+    }
+    .card-image + .content {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .content {
+      @include border-radius(4px);
+      background-color: #ffffff;
+      padding: 20px;
+
+      .category {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 15px;
+        text-transform: capitalize;
+        margin: 0 0 8px;
+      }
+      .card-title {
+        color: #2c2c2c;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-top: 15px;
+        margin-bottom: 12px;
+
+        a {
+          color: inherit;
+        }
+      }
+      .card-description {
+        color: #9A9A9A;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 27px;
+        margin-bottom: 16px;
+      }
+      .fagri-blog-section-metadata {
+
+        .fagri-metadata-avatar {
+
+          display: inline-block;
+
+          img {
+            @include border-radius(50%);
+            box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+            width: 30px;
+            height: 30px;
+            margin-right: 8px;
+          }
+        }
+        .fagri-metadata-autor {
+          display: inline-block;
+          color: #9A9A9A;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+@media( min-width: 769px ) {
+  .section.related-posts .hestia-title {
+      font-size: 35px !important;
+  }
+}
